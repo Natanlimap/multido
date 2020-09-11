@@ -4,7 +4,6 @@ export default function Lista(props) {
     const [item, setItem] = React.useState("");
     function addItem(){
         props.func(item, props.index);
-        console.log(props.itens)
     }
     return (
         <div class="list-group ">
