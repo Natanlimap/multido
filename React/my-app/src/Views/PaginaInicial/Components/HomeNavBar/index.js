@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
- function MyNavBar() {
+
+function HomeNavBar() {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -10,21 +11,18 @@ import { Link } from 'react-router-dom';
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a to="/" className="nav-link" href="#">Página inicial <span className="sr-only">(current)</span></a>
-                        </li>
-                        <li className="nav-item">
-                            <a to="/Mainpage" className="nav-link" href="#">Perfil</a>
-                        </li>
                     </ul>
-                    <div className="form-inline my-2 my-lg-0">
-                        <Link to={"/"}><button className="btn btn-outline-danger my-2 my-sm-0" type="submit">Sair</button></Link>
-                    </div>
+                    <form className="form-inline my-2 my-lg-0">
+                        <ul className="navbar-nav mr-auto">
+                        <button className="btn btn-light px-3 mx-3 my-sm-0" type="submit">Cadastre-se</button>
+                        <Link to={"./mainpage"}><button className="btn btn-secondary  px-3  my-sm-0" type="submit">Entrar</button></Link>
+
+                        </ul>
+                    </form>
                 </div>
             </nav>
 
         </div>
     )
 }
-
-export default MyNavBar;
+export default HomeNavBar;
