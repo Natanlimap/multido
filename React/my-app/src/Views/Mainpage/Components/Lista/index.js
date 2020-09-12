@@ -2,15 +2,21 @@ import React from 'react';
 
 export default function Lista(props) {
     const [item, setItem] = React.useState("");
+    const [lista, setLista] = React.useState(props.itens)
+
     function addItem(){
-        props.func(item, props.index);
+        props.setList(props.addList(item, props.title));
     }
+    
+
     return (
         <div class="list-group ">
             <a href="/" className="list-group-item list-group-item-action  bg-dark  active">{props.title}</a>
-            {props.itens.map(element => {
+
+            {lista.map((element, key) => {
                             return (    
-                            <a href="/" className="list-group-item list-group-item-action">{element}</a>)
+                               <a href="/" key={key} className="list-group-item list-group-item-action">{element}</a>
+                            )
             })}
 
             
