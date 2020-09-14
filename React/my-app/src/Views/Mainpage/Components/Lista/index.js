@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function Lista(props) {
     const [item, setItem] = React.useState("");
-    const [lista, setLista] = React.useState(props.itens)
+    let lista = props.itens;
 
     function addItem(){
-        
+    
         props.setList(props.addList(item, props.title));
     }
     return (

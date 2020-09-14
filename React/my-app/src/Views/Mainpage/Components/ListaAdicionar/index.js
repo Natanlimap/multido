@@ -12,7 +12,7 @@ export default function ListaAdicionar(props) {
                 <div className="input-group ">
                     <input value={listName} onChange={(value)=>{setListName(value.target.value)}} type="text" className="form-control" placeholder="Novo item" aria-label="Novo item" aria-describedby="button-addon2" />
                     <div className="input-group-append">
-                        <button className="btn btn-outline-secondary" type="button" onClick={addNewList} id="button-addon2">Adiconar</button>
+                        <button className="btn btn-outline-secondary" type="button" onClick={addNewList} id="button-addon2">Adicionar</button>
                     </div>
                 </div>
             </div>

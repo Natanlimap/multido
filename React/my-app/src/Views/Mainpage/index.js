@@ -5,34 +5,25 @@ import ListaAdicionar from './Components/ListaAdicionar';
 import "./index.css"
 
 export default function Mainpage() {
-    const [ListasVector, SetListaVector] = useState({
-        "teste 1": ["123", "234"],
+    const [ListasDeListas, SetListaDeLista] = useState({
+        "Atividades FMC2": ["Lista de exercicio 1", "Trabalho"],
+        "Atividades TEES1": ["Desenvolver projeto react", "Desenvolver projeto Svelte", "Desenvolver projeto "],
     }); 
+    
     function addOnList(newItem, key){
-        let newList = {};
+        let newList = {...ListasDeListas};
 
-        for(let i =0; i < Object.keys(ListasVector).length;i++){
-            let key = Object.keys(ListasVector)[i];
-            newList[key] = ListasVector[key];
-        }
-        
         let arr = newList[key];
         arr.push(newItem);
         newList[key] = arr;
         return newList;
     }
 
-
     function addAList(newListName){
-        var newList = {};
-        
-        for(let i =0; i < Object.keys(ListasVector).length;i++){
-            let key = Object.keys(ListasVector)[i];
-            newList[key] = ListasVector[key];
-        }
-
+        var newList = {...ListasDeListas};
         newList[newListName] = [];
-        SetListaVector(newList);
+        
+        SetListaDeLista(newList);
     }
 
 
@@ -42,10 +33,10 @@ export default function Mainpage() {
             <div>
                 <div className="container-fluid p-4 testimonial-group" >
                     <div className="row overflow-auto" >
-                        {Object.keys(ListasVector).map((key)=>{
+                        {Object.keys(ListasDeListas).map((key)=>{
                             return (
                                 <div className="col-sm-3" key={key} id="widthScroll">
-                                    <Lista title={key} itens= {ListasVector[key]} vector={ListasVector} setList={SetListaVector} addList={addOnList}></Lista>
+                                    <Lista title={key} itens= {ListasDeListas[key]} vector={ListasDeListas} setList={SetListaDeLista} addList={addOnList}></Lista>
                                 </div>
                             )
                         })}
