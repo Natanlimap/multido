@@ -15,7 +15,7 @@ function HomeNavBar() {
                     <form className="form-inline my-2 my-lg-0">
                         <ul className="navbar-nav mr-auto">
                         <button className="btn btn-light px-3 mx-3 my-sm-0" type="submit">Cadastre-se</button>
-                        <Link to={"./mainpage"}><button className="btn btn-secondary  px-3  my-sm-0" type="submit">Entrar</button></Link>
+                        <Link to={"./loginpage"}><button className="btn btn-secondary  px-3  my-sm-0" type="submit">Entrar</button></Link>
 
                         </ul>
                     </form>

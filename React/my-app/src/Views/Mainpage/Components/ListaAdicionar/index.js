@@ -4,6 +4,7 @@ export default function ListaAdicionar(props) {
     const [listName, setListName] = React.useState("");
     function addNewList(){
         props.func(listName);
+        setListName("");
     }
     return (
         <div class="list-group ">

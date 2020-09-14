@@ -5,10 +5,9 @@ export default function Lista(props) {
     const [lista, setLista] = React.useState(props.itens)
 
     function addItem(){
+        
         props.setList(props.addList(item, props.title));
     }
-    
-
     return (
         <div class="list-group ">
             <a href="/" className="list-group-item list-group-item-action  bg-dark  active">{props.title}</a>
