@@ -33,7 +33,6 @@
               </div>
             </div>
             <div class="col-sm-4">
-              <img :src="require(`@/assets/board.png`)" />
             </div>
             <div class="row">
               <div class="col-sm-6 py-2"></div>

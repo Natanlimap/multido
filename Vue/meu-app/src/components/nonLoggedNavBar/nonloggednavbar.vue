@@ -17,7 +17,7 @@
         <ul class="navbar-nav mr-auto"></ul>
         <form class="form-inline my-2 my-lg-0">
           <ul class="navbar-nav mr-auto">
-            <button class="btn btn-light px-3 mx-3 my-sm-0" type="submit">Cadastre-se</button>
+            <router-link to="/Login"><button class="btn btn-light px-3 mx-3 my-sm-0" type="submit">Cadastre-se</button></router-link>
             <button class="btn btn-secondary px-3 my-sm-0" type="submit">Entrar</button>
           </ul>
         </form>
@@ -25,10 +25,9 @@
     </nav>
   </div>
 </template>
-
 <script>
 export default {
-    name: "nonLoggedNavBar"
+    name: "NonLoggedNavBar"
 };
 </script>
 
