@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div class="App">
     <Homepage/>
  </div>
 </template>
@@ -15,12 +15,10 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App{
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #282c34;
+  min-height: 100vh;
 }
+
 </style>
