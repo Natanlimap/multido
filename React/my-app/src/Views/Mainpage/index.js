@@ -3,13 +3,27 @@ import Lista from './Components/Lista';
 import MyNavBar from '../../Components/navbar'
 import ListaAdicionar from './Components/ListaAdicionar';
 import "./index.css"
+import { AuthLogin } from '../../Services/auth';
+import GetLista, {getItens, GetListas} from '../../Store/firestore';
 
 export default function Mainpage() {
     const [ListasDeListas, SetListaDeLista] = useState({
         "Atividades FMC2": ["Lista de exercicio 1", "Trabalho"],
         "Atividades TEES1": ["Desenvolver projeto react", "Desenvolver projeto Svelte", "Desenvolver projeto "],
     }); 
-    
+    const [read, setRead] = useState(false);
+
+    async function getItensFromFirestore(){
+        getItens(ListasDeListas).then(function(value){
+            SetListaDeLista(value);
+        })
+    }
+
+    if(!read){
+        getItensFromFirestore();
+        setRead(true);
+    }
+
     function addOnList(newItem, key){
         let newList = {...ListasDeListas};
 
@@ -19,6 +33,7 @@ export default function Mainpage() {
         return newList;
     }
 
+    
     function addAList(newListName){
         var newList = {...ListasDeListas};
         newList[newListName] = [];

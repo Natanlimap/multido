@@ -7,7 +7,7 @@ export default function ListaAdicionar(props) {
         setListName("");
     }
     return (
-        <div class="list-group ">
+        <div className="list-group ">
             <div className="list-group-item">
                 <div className="input-group ">
                     <input value={listName} onChange={(value)=>{setListName(value.target.value)}} type="text" className="form-control" placeholder="Novo item" aria-label="Novo item" aria-describedby="button-addon2" />

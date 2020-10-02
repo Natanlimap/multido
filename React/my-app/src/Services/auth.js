@@ -1,8 +1,7 @@
-import "firebase/auth";
-import fire from "./firebase";
+import firebase from './firebase'
 
 export  const IsAuthenticated = () =>{
-  var user = fire.auth().currentUser;
+  var user = firebase.auth().currentUser;
 
   if (user) {
     return user;
@@ -12,9 +11,9 @@ export  const IsAuthenticated = () =>{
 };
 
 
-export const AuthLogin = async (login, senha) => {
-    var user = await fire.auth().signInWithEmailAndPassword(login, senha);
-    return user.user;
+export async function AuthLogin(login, senha){
+    let user = await (await firebase.auth().signInWithEmailAndPassword(login, senha));
+    return user;
 }
 
 

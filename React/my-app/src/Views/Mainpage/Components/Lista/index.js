@@ -3,25 +3,28 @@ import React from 'react';
 export default function Lista(props) {
     const [item, setItem] = React.useState("");
     let lista = props.itens;
+    function addItem() {
 
-    function addItem(){
-    
         props.setList(props.addList(item, props.title));
     }
     return (
-        <div class="list-group ">
+        <div className="list-group ">
             <a href="/" className="list-group-item list-group-item-action  bg-dark  active">{props.title}</a>
 
             {lista.map((element, key) => {
-                            return (    
-                               <a href="/" key={key} className="list-group-item list-group-item-action">{element}</a>
-                            )
+                return (
+                    <div className="list-group-item big-checkbox ">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                        <a href="/" key={key}>{element}</a>
+
+                    </div>
+                )
             })}
 
-            
+
             <div className="list-group-item list-group-item-action">
                 <div className="input-group ">
-                    <input value={item} onChange={(value)=>{setItem(value.target.value)}} type="text" className="form-control" placeholder="Novo item" aria-label="Novo item" aria-describedby="button-addon2" />
+                    <input value={item} onChange={(value) => { setItem(value.target.value) }} type="text" className="form-control" placeholder="Novo item" aria-label="Novo item" aria-describedby="button-addon2" />
                     <div className="input-group-append">
                         <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={addItem}>Adiconar</button>
                     </div>

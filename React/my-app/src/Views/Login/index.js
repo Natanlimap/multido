@@ -7,8 +7,6 @@ import "./index.css"
 function LoginPage() {
     const [email, SetEmail] = React.useState("");
     const [senha, SetSenha] = React.useState("");
-
-    let route = "/loginpage";
     return (
         <div>
             <HomeNavBar></HomeNavBar>
@@ -23,18 +21,16 @@ function LoginPage() {
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputEmail1">Email </label>
+                                    <label htmlFor="exampleInputEmail1">Email </label>
                                     <input onChange={(value) => { SetEmail(value.target.value) }} type="email" name="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
                                 </div>
                                 <div className="form-group">
-                                    <label for="exampleInputEmail1">Senha</label>
+                                    <label htmlFor="exampleInputEmail1">Senha</label>
                                     <input onChange={(value) => { SetSenha(value.target.value) }} type="password" name="password" id="password" className="form-control" aria-describedby="emailHelp" placeholder="Enter Password" />
                                 </div>
 
                                 <div className="col-md-12 text-center ">
-                                    <Link to={"/mainpage"}><button onClick={() => {
-                                        (AuthLogin(email, senha))
-                                    }} type="submit" className=" btn btn-block mybtn btn-secondary">Login</button></Link>
+                                    <Link to={"/mainpage"}><div type="submit" className=" btn btn-block mybtn btn-secondary">Login</div></Link>
                                 </div>
 
                                 <div className="form-group py-5">
