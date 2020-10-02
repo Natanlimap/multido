@@ -1,0 +1,11 @@
+.testimonial-group > .row {
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+#widthScroll{
+    margin-bottom: 33%;
+
+}
+body{
+    overflow-y: hidden;
+}

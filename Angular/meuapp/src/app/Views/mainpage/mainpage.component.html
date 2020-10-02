@@ -1,1 +1,18 @@
-<p>mainpage works!</p>
+<div>
+    <app-nonnavbar></app-nonnavbar>
+    <div>
+        <div class="container-fluid p-4 testimonial-group" >
+            <div class="row overflow-auto" >
+                
+                        <div *ngFor="let checklist of objetoLista" class="col-sm-3" key={key} id="widthScroll">
+                            <app-checklist title=[checklist.title]></app-checklist>
+                        </div>
+                
+                <div class="col-sm-3">
+<!--                     <ListaAdicionar func={addAList}></ListaAdicionar>
+ -->                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
