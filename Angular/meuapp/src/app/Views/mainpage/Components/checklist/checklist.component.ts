@@ -6,9 +6,14 @@ import { Lista } from 'src/app/Class/lista';
   templateUrl: './checklist.component.html',
 })
 export class ChecklistComponent implements OnInit {
-   @Input() title = "title";
-   @Input() itens = [];
+   @Input() title = "Titulo da lista";
+   @Input() itens = ["item 1", "item 2", "item 3"];
+   @Input() addItem;
 
+   checked(){
+
+    this.addItem();
+  }
   constructor() { }
 
   ngOnInit(): void {

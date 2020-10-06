@@ -7,10 +7,14 @@ import { Lista } from 'src/app/Class/lista';
 })
 export class MainpageComponent {
   objetoLista = [
-    new Lista("Teste", [1, 2, 3]),
-    new Lista("Teste2", [1, 2, 3]),
-
+    new Lista("Titulo 1", ["item 1", "item 2", "Item 3"]),
+    new Lista("Titulo 2", ["item 4", "item 5", "item 6"]),
   ];
+
+  addItem(newItem) {
+    alert("adicionei")
+/*     this.objetoLista[0].itens.push("adwad");
+ */  };
   constructor() { }
 
 
