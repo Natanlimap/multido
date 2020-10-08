@@ -7,6 +7,7 @@ import { MainpageComponent } from './Views/mainpage/mainpage.component';
 import { ChecklistComponent } from './Views/mainpage/Components/checklist/checklist.component';
 import { NonLoggednavbarComponent } from './Components/non-loggednavbar/non-loggednavbar.component';
 import { ChecklistitemComponent } from './Views/mainpage/Components/checklist/Components/checklistitem/checklistitem.component';
+import { AdicionarlistaComponent } from './Views/mainpage/Components/adicionarlista/adicionarlista.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ChecklistitemComponent } from './Views/mainpage/Components/checklist/Co
     ChecklistComponent,
     NonLoggednavbarComponent,
     ChecklistitemComponent,
+    AdicionarlistaComponent,
   ],
   imports: [
     BrowserModule,
