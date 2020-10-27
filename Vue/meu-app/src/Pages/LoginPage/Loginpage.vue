@@ -1,31 +1,31 @@
 <template>
   <div>
             <NonLoggedNavBar></NonLoggedNavBar>
-            <div className="container py-5">
-                <div className="row py-5">
-                    <div className="col-md-5 mx-auto py-5">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-md-5 mx-auto py-5">
                         <div id="first">
-                            <div className="myform form ">
-                                <div className="logo mb-3">
-                                    <div className="col-md-12 text-center">
+                            <div class="myform form ">
+                                <div class="logo mb-3">
+                                    <div class="col-md-12 text-center">
                                         <h1>Login</h1>
                                     </div>
                                 </div>
-                                <div className="form-group">
+                                <div class="form-group">
                                     <label for="exampleInputEmail1">Email </label>
-                                    <input  type="email" name="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
+                                    <input  type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
                                 </div>
-                                <div className="form-group">
+                                <div class="form-group">
                                     <label for="exampleInputEmail1">Senha</label>
-                                    <input  type="password" name="password" id="password" className="form-control" aria-describedby="emailHelp" placeholder="Enter Password" />
+                                    <input  type="password" name="password" id="password" class="form-control" aria-describedby="emailHelp" placeholder="Enter Password" />
                                 </div>
 
-                                <div className="col-md-12 text-center pt-2">
-                                    <router-link to="Mainpage"> <button type="submit" className=" btn btn-block mybtn btn-secondary">Login</button></router-link>
+                                <div class="col-md-12 text-center pt-2">
+                                    <router-link to="Mainpage"> <button type="submit" class=" btn btn-block mybtn btn-secondary">Login</button></router-link>
                                 </div>
 
-                                <div className="form-group py-5">
-                                    <p className="text-center">Não possui uma conta? <a href="#" id="signup">Crie agora</a></p>
+                                <div class="form-group py-5">
+                                    <p class="text-center">Não possui uma conta? <a href="#" id="signup">Crie agora</a></p>
                                 </div>
                             </div>
                         </div>

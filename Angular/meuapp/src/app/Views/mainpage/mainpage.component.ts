@@ -11,10 +11,9 @@ export class MainpageComponent {
     new Lista("Titulo 2", ["item 4", "item 5", "item 6"]),
   ];
 
-  addItem(newItem) {
-    alert("adicionei")
-/*     this.objetoLista[0].itens.push("adwad");
- */  };
+ addAList(){
+   alert("teste")
+ }
   constructor() { }
 
 
