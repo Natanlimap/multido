@@ -1,10 +1,11 @@
 <script>
-	import Mainpage from './Views/Mainpage/mainpage.svelte'
+import Loginpage from './Views/Loginpage/loginpage.svelte';
+
 </script>
 
 <main>
     <div class="App">		
-		<Mainpage></Mainpage>
+		<Loginpage></Loginpage>
 	</div>
 </main>
 
