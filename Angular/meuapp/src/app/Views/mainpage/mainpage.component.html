@@ -5,11 +5,11 @@
             <div class="row overflow-auto" >
                 
                         <div *ngFor="let checklist of objetoLista" class="col-sm-3" key={key} id="widthScroll">
-                            <app-checklist title={{checklist.title}} addItem={{addItem}}></app-checklist>
+                            <app-checklist (adicionarItemALista)="addItem($event)" lista={{checklist}} title={{checklist.title}}></app-checklist>
                         </div>
                 
                 <div class="col-sm-3">
-                    <app-adicionarlista></app-adicionarlista>
+                    <app-adicionarlista (criarLista)="addAList($event)"></app-adicionarlista>
                 </div>
             </div>
         </div>

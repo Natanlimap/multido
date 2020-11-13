@@ -10,12 +10,13 @@ export class MainpageComponent {
     new Lista("Titulo 1", ["item 1", "item 2", "Item 3"]),
     new Lista("Titulo 2", ["item 4", "item 5", "item 6"]),
   ];
-
- addAList(){
-   alert("teste")
+  addItem(nomeDoItem){
+    alert(nomeDoItem)
+  }
+ addAList(nomeDaLista){
+   alert(nomeDaLista)
  }
   constructor() { }
-
 
 
 }

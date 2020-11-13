@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Lista } from 'src/app/Class/lista';
 
 @Component({
@@ -8,13 +9,13 @@ import { Lista } from 'src/app/Class/lista';
 export class ChecklistComponent implements OnInit {
    @Input() title = "Titulo da lista";
    @Input() itens = ["item 1", "item 2", "item 3"];
-   @Input() addItem;
 
-   checked(){
+   @Output() adicionarItemALista = new EventEmitter()
 
-    this.addItem();
+   
+  constructor() {
+
   }
-  constructor() { }
 
   ngOnInit(): void {
   }

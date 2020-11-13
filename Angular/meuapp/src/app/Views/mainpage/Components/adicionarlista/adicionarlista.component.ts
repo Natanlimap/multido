@@ -1,15 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-adicionarlista',
   templateUrl: './adicionarlista.component.html',
 })
+
 export class AdicionarlistaComponent implements OnInit {
 
+  @Output() criarLista = new EventEmitter()
 
-  teste(){
-    alert("entrei")
-  }
+  name = ''
+
   constructor() { }
 
   ngOnInit(): void {
