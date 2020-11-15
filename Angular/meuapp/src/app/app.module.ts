@@ -8,6 +8,8 @@ import { ChecklistComponent } from './Views/mainpage/Components/checklist/checkl
 import { NonLoggednavbarComponent } from './Components/non-loggednavbar/non-loggednavbar.component';
 import { ChecklistitemComponent } from './Views/mainpage/Components/checklist/Components/checklistitem/checklistitem.component';
 import { AdicionarlistaComponent } from './Views/mainpage/Components/adicionarlista/adicionarlista.component';
+import { HomePageComponent } from './Views/home-page/home-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { AdicionarlistaComponent } from './Views/mainpage/Components/adicionarli
     NonLoggednavbarComponent,
     ChecklistitemComponent,
     AdicionarlistaComponent,
+    HomePageComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
