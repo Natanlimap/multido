@@ -5,7 +5,7 @@
             <div class="row overflow-auto" >
                 
                         <div *ngFor="let checklist of objetoLista" class="col-sm-3" key={key} id="widthScroll">
-                            <app-checklist (adicionarItemALista)="addItem($event)" lista={{checklist}} title={{checklist.title}}></app-checklist>
+                            <app-checklist teste={{checklist.teste}} (adicionarItemALista)="addItem($event)" {object}={{checklist}} title={{checklist.title}}></app-checklist>
                         </div>
                 
                 <div class="col-sm-3">

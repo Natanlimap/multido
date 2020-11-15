@@ -1,20 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { Lista } from 'src/app/Class/lista';
 
 @Component({
   selector: 'app-mainpage',
   templateUrl: './mainpage.component.html',
 })
 export class MainpageComponent {
-  objetoLista = [
-    new Lista("Titulo 1", ["item 1", "item 2", "Item 3"]),
-    new Lista("Titulo 2", ["item 4", "item 5", "item 6"]),
+  
+  objetoLista: Array<{title: string, lista: Array<string>}> = [
+    {
+      title: "teste",
+      lista: ["1", "2", "3"]
+    },
+    {
+      title: "teste2",
+      lista: ["1", "2", "3"]
+    },
+
   ];
-  addItem(nomeDoItem){
-    alert(nomeDoItem)
+  addItem(object){
+    this.objetoLista[object.index].lista.push(object.nome)
+    console.log(this.objetoLista)
   }
+
  addAList(nomeDaLista){
-   alert(nomeDaLista)
+   console.log(this.objetoLista)
  }
   constructor() { }
 

@@ -11,9 +11,9 @@
 
     <div class="list-group-item list-group-item-action">
         <div class="input-group ">
-            <input />
+            <input (change)="nameChange($event)"/>
             <div class="input-group-append">
-                <button (click)="adicionarItemALista.emit('teste')" class="btn btn-outline-secondary" type="button" id="button-addon2">Adiconar</button>
+                <button (click)="adicionarItemALista.emit({index: 0, nome: nome})" class="btn btn-outline-secondary" type="button" id="button-addon2">Adiconar</button>
             </div>
         </div>
     </div>

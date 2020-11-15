@@ -16,6 +16,13 @@ export class ChecklistitemComponent implements OnInit {
     }
     this.done = true;
   }
+
+  novoitem=''
+
+  nameChange(value){
+    this.novoitem = value.target.value
+    console.log(this.novoitem)
+  }
   constructor() { }
 
   ngOnInit(): void {
