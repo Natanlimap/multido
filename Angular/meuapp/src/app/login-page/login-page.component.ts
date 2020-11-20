@@ -8,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class LoginPageComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit(): void {
+  email = ''
+  senha = ''
+  emailChange(value){
+    this.email = value.target.value
+    console.log(this.email)
   }
+  senhaChange(value){
+    this.senha = value.target.value
+    console.log(this.senha)
+  }
+  ngOnInit(): void {
+  } 
 
 }

@@ -13,6 +13,7 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email </label>
                             <input
+                                (change)="emailChange($event)"
                                 bind:value={email}
                                 type="email"
                                 name="email"
@@ -24,6 +25,7 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Senha</label>
                             <input
+                                (change)="senhaChange($event)"
                                 bind:value={senha}
                                 type="password"
                                 name="password"
