@@ -43,7 +43,6 @@ export default {
   },
   methods: {
     addLista(NomeNovaLista) {
-      alert("Função passada pelo pai para adicionar lista");
       this.Listas.push({ Title: NomeNovaLista, Itens: [] });
     },
 

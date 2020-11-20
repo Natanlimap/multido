@@ -1,8 +1,28 @@
 <template>
   <div class="list-group">
-    <a href="/" class="list-group-item list-group-item-action bg-dark active">{{
-      title
-    }}</a>
+    <div href="#" class="list-group-item list-group-item-action bg-dark active">
+      <div class="row">
+        <div class="col-sm-8">
+          {{ title }}
+        </div>
+        <div class="col-sm-2">
+          <div class="btn-group dropleft">
+            <a
+              type="button"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Excluir lista</a>
+              <a class="dropdown-item" href="#">Excluir concluidos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <Checkitem v-for="item in itens" :key="item" v-bind:name="item"></Checkitem>
 
     <div class="list-group-item list-group-item-action">
