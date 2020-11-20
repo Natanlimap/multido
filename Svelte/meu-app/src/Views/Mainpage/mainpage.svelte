@@ -4,6 +4,7 @@
     import Nonloggednavbar from "../../Components/LoggedNavBar/loggednavbar.svelte";
     import AdicionarLista from "./Components/Lista/lista.svelte";
     import Adicionarlista from "./Components/AdicionarLista/adicionarlista.svelte";
+import Loggednavbar from "../../Components/LoggedNavBar/loggednavbar.svelte";
 
     let listas = [
         { title: "Lista 1", checkitens: [1, 2, 3] },
@@ -26,6 +27,7 @@
 
 <main>
     <div>
+        <Loggednavbar></Loggednavbar>  
         <div>
             <div class="container-fluid p-4 testimonial-group">
                 <div class="row overflow-auto">
