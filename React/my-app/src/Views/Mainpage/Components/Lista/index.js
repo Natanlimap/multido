@@ -7,6 +7,10 @@ export default function Lista(props) {
 
         props.setList(props.addList(item, props.title));
     }
+    function removeItem(element){
+        props.setList(props.removeItem(element, props.title))
+        
+    }
     return (
         <div className="list-group ">
             <a href="/" className="list-group-item list-group-item-action  bg-dark  active">{props.title}</a>
@@ -14,7 +18,7 @@ export default function Lista(props) {
             {lista.map((element, key) => {
                 return (
                     <div className="list-group-item big-checkbox ">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                        <input checked={false} onClick={()=>{removeItem(element)}} class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
                         <a href="/" key={key}>{element}</a>
 
                     </div>

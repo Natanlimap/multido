@@ -37,7 +37,7 @@ export async function getItens(ListasDeListas) {
     return oldList;
 }
 
-export function addOnList(newItem, key){
+export function addOnList(newItem, key, ListasDeListas){
     let newList = {...ListasDeListas};
 
     let arr = newList[key];

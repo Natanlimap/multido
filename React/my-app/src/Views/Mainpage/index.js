@@ -32,7 +32,16 @@ export default function Mainpage() {
         newList[key] = arr;
         return newList;
     }
-
+    function removeItem(Item, key){
+        let newList = {...ListasDeListas};
+        let arr = newList[key];
+        const index = arr.indexOf(Item)
+        if(index > -1){
+            arr.splice(index, 1)
+        }
+        newList[key] = arr;
+        return newList;
+    }
     
     function addAList(newListName){
         var newList = {...ListasDeListas};
@@ -51,7 +60,7 @@ export default function Mainpage() {
                         {Object.keys(ListasDeListas).map((key)=>{
                             return (
                                 <div className="col-sm-3" key={key} id="widthScroll">
-                                    <Lista title={key} itens= {ListasDeListas[key]} vector={ListasDeListas} setList={SetListaDeLista} addList={addOnList}></Lista>
+                                    <Lista title={key} itens= {ListasDeListas[key]} vector={ListasDeListas} setList={SetListaDeLista} addList={addOnList} removeItem={removeItem}></Lista>
                                 </div>
                             )
                         })}
