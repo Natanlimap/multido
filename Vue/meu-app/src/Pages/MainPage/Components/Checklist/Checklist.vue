@@ -16,8 +16,7 @@
             >
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Excluir lista</a>
-              <a class="dropdown-item" href="#">Excluir concluidos</a>
+              <a v-on:click="meExcluir"  class="dropdown-item" href="#">Excluir lista</a>
             </div>
           </div>
         </div>
@@ -60,6 +59,9 @@ export default {
     adicionar() {
       this.addInLista(this.title, this.name);
     },
+     meExcluir() {
+      this.excluirLista(this.title);
+    },
      excluir(elemento) {
       this.excluirElemento(elemento, this.title)
     },
@@ -68,7 +70,7 @@ export default {
     name: "",
   }),
 
-  props: ["title", "itens", "addInLista", "excluirElemento"],
+  props: ["title", "itens", "addInLista", "excluirElemento", 'excluirLista'],
 };
 </script>
 

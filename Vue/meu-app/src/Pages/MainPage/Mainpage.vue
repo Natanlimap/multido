@@ -12,6 +12,7 @@
             id="widthScroll"
           >
             <Checklist
+              :excluirLista="excluirLista"
               :excluirElemento="excluirElemento"
               :addInLista="addInLista"
               :title="lista.Title"
@@ -45,6 +46,14 @@ export default {
   methods: {
     addLista(NomeNovaLista) {
       this.Listas.push({ Title: NomeNovaLista, Itens: [] });
+    },
+
+    excluirLista(title) {
+      for (let index = 0; index < this.Listas.length; index++) {
+        if (this.Listas[index].Title === title) {
+          this.Listas.splice(index, 1);
+        }
+      }
     },
 
     excluirElemento(elemento, title) {
