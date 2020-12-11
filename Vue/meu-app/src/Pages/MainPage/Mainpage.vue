@@ -12,6 +12,7 @@
             id="widthScroll"
           >
             <Checklist
+              :excluirElemento="excluirElemento"
               :addInLista="addInLista"
               :title="lista.Title"
               :itens="lista.Itens"
@@ -46,14 +47,28 @@ export default {
       this.Listas.push({ Title: NomeNovaLista, Itens: [] });
     },
 
-    addInLista(title, name) {
-      if(name === '') return;
+    excluirElemento(elemento, title) {
+      if (title === "") return;
 
       for (let index = 0; index < this.Listas.length; index++) {
-        if(this.Listas[index].Title === title){
+        if (this.Listas[index].Title === title) {
+          let arr = this.Listas[index].Itens;
+          const arrayIndex = arr.indexOf(elemento);
+          if (arrayIndex > -1) {
+            arr.splice(arrayIndex, 1);
+          }
+          this.Listas[index].Itens = arr;
+        }
+      }
+    },
+
+    addInLista(title, name) {
+      if (name === "") return;
+
+      for (let index = 0; index < this.Listas.length; index++) {
+        if (this.Listas[index].Title === title) {
           this.Listas[index].Itens.push(name);
-        } 
-        
+        }
       }
     },
   },

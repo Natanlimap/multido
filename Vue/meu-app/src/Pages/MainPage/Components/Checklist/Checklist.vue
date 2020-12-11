@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <Checkitem v-for="item in itens" :key="item" v-bind:name="item"></Checkitem>
+    <Checkitem v-for="item in itens" :key="item" v-bind:excluir="excluir" v-bind:name="item"></Checkitem>
 
     <div class="list-group-item list-group-item-action">
       <div class="input-group">
@@ -60,12 +60,15 @@ export default {
     adicionar() {
       this.addInLista(this.title, this.name);
     },
+     excluir(elemento) {
+      this.excluirElemento(elemento, this.title)
+    },
   },
   data: () => ({
     name: "",
   }),
 
-  props: ["title", "itens", "addInLista"],
+  props: ["title", "itens", "addInLista", "excluirElemento"],
 };
 </script>
 

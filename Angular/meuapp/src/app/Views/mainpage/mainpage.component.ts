@@ -20,6 +20,7 @@ export class MainpageComponent {
   addItem(object){
     this.objetoLista[object.index].lista.push(object.nome)
     console.log(this.objetoLista)
+    console.log(object)
   }
 
  addAList(nomeDaLista){
