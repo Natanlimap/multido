@@ -1,16 +1,32 @@
 <script>
     import Checkitem from './Components/Checkitem/checkitem.svelte'
     export let addInList = function(){};
+    export let removeALista = function(){};
+    export let removeAItem = function(){};
+
     export let listaObject = {};
     let novoCheckItem = "";
+    
+    function teste(evt){
+        evt.preventDefault()
+        removeALista(listaObject.title)
+    }
+    function removerMeuItem(item){
+        removeAItem(listaObject.title, item)
+    }
 </script>
 
 <main>
     <div class="list-group ">
-        <a href="/" class="list-group-item list-group-item-action  bg-dark  active">{listaObject.title}</a>
+        <a href="/" class="list-group-item list-group-item-action  bg-dark  active">
+            <div class='d-flex flex-row justify-content-between'>
+                {listaObject.title}
+                <button type="button" on:click={teste} class="btn btn-link">X</button>
+            </div>
+        </a>
 
                 {#each listaObject.checkitens as item, i}
-                <Checkitem title={item}></Checkitem>
+                <Checkitem {removerMeuItem} title={item}></Checkitem>
 
                 {/each}
         <div class="list-group-item list-group-item-action">

@@ -4,15 +4,38 @@
     import Nonloggednavbar from "../../Components/LoggedNavBar/loggednavbar.svelte";
     import AdicionarLista from "./Components/Lista/lista.svelte";
     import Adicionarlista from "./Components/AdicionarLista/adicionarlista.svelte";
-import Loggednavbar from "../../Components/LoggedNavBar/loggednavbar.svelte";
+    import Loggednavbar from "../../Components/LoggedNavBar/loggednavbar.svelte";
 
     let listas = [
         { title: "Lista 1", checkitens: [1, 2, 3] },
         { title: "Lista 2", checkitens: [4, 2, 7] },
     ];
 
-    function addAList() {
-        listas[listas.length] = { title: "teste", checkitens: [] };
+    function addAList(title) {
+        listas[listas.length] = { title: title, checkitens: [] };
+    }
+    function removeAItem(title, elemento) {
+        if (title === "") return;
+        for (let index = 0; index < listas.length; index++) {
+            if (listas[index].title === title) {
+
+                let arr = listas[index].checkitens;
+                const arrayIndex = arr.indexOf(elemento);
+                if (arrayIndex > -1) {
+                    arr.splice(arrayIndex, 1);
+                }
+                listas[index].Itens = arr;
+            }
+        }
+    }
+    function removeALista(title) {
+        var newlista = [...listas];
+        for (let index = 0; index < listas.length; index++) {
+            if (listas[index].title === title) {
+                newlista.splice(index, 1);
+            }
+        }
+        listas = newlista;
     }
     function addInList(lista, novoElemento) {
         let index = listas.indexOf(lista);
@@ -27,13 +50,17 @@ import Loggednavbar from "../../Components/LoggedNavBar/loggednavbar.svelte";
 
 <main>
     <div>
-        <Loggednavbar></Loggednavbar>  
+        <Loggednavbar />
         <div>
             <div class="container-fluid p-4 testimonial-group">
                 <div class="row overflow-auto">
                     {#each listas as lista, i}
                         <div class="col-sm-3" id="widthScroll">
-                            <Lista {addInList} listaObject={lista} />
+                            <Lista
+                                {removeAItem}
+                                {addInList}
+                                {removeALista}
+                                listaObject={lista} />
                         </div>
                     {/each}
 
