@@ -11,9 +11,18 @@ export default function Lista(props) {
         props.setList(props.removeItem(element, props.title))
         
     }
-    return (
+    function removeLista(evt){
+        evt.preventDefault()
+        props.removeALista(props.title)
+    }
+        return (
         <div className="list-group ">
-            <a href="/" className="list-group-item list-group-item-action  bg-dark  active">{props.title}</a>
+            <a className="list-group-item  bg-dark  active">
+                <div className='d-flex flex-row justify-content-between'>
+                    {props.title}
+                    <a href='/' onClick={removeLista}>X</a>
+                </div>
+            </a>
 
             {lista.map((element, key) => {
                 return (

@@ -49,7 +49,11 @@ export default function Mainpage() {
         
         SetListaDeLista(newList);
     }
-
+    function removeALista(ListName){
+        var newList = {...ListasDeListas};
+        delete newList[ListName]        
+        SetListaDeLista(newList);
+    }
 
     return (
         <div>
@@ -60,7 +64,7 @@ export default function Mainpage() {
                         {Object.keys(ListasDeListas).map((key)=>{
                             return (
                                 <div className="col-sm-3" key={key} id="widthScroll">
-                                    <Lista title={key} itens= {ListasDeListas[key]} vector={ListasDeListas} setList={SetListaDeLista} addList={addOnList} removeItem={removeItem}></Lista>
+                                    <Lista title={key} itens= {ListasDeListas[key]} vector={ListasDeListas} setList={SetListaDeLista} removeALista={removeALista} addList={addOnList} removeItem={removeItem}></Lista>
                                 </div>
                             )
                         })}
